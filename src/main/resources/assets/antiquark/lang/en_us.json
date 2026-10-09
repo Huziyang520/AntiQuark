@@ -1,0 +1,8 @@
+{
+  "antiquark.category.antiquark": "AntiQuark",
+  "antiquark.category.general": "General",
+  "quark.config.general.use_anti_overlap.name": "Use Anti Overlap",
+  "quark.config.general.use_anti_overlap.desc": "Disable modules that overlap with other installed mods.",
+  "quark.config.antiquark.core.name": "Core",
+  "quark.config.antiquark.core.desc": "Core AntiQuark integration module."
+}
