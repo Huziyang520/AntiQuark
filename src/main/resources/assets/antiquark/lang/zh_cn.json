@@ -1,0 +1,8 @@
+{
+  "antiquark.category.antiquark": "反夸克",
+  "antiquark.category.general": "通用",
+  "zeta.config.general.use_anti_overlap.name": "启用反重叠",
+  "zeta.config.general.use_anti_overlap.desc": "自动禁用与已安装模组功能重叠的模块。",
+  "zeta.config.antiquark.core.name": "核心",
+  "zeta.config.antiquark.core.desc": "反夸克核心集成模块。"
+}
