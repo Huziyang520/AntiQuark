@@ -10,7 +10,7 @@
     "server.FallingBlockEntityMixin",
     "server.LivingEntityVoidTotemMixin",
     "server.MobLeashMixin",
-    "server.StrongholdPortalMixin",
+    "server.StructurePieceEndPortalMixin",
     "server.ZombieKilledEntityMixin",
     "server.PortalShapeMixin"
   ],
