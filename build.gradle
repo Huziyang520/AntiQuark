@@ -2,6 +2,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'net.minecraftforge.gradle' version '6.0.54'
+    id 'org.spongepowered.mixin' version '0.7.38'
 }
 
 version = mod_version
@@ -18,6 +19,10 @@ minecraft {
     mappings channel: mapping_channel, version: mapping_version
 
     copyIdeResources = true
+
+    mixin {
+        add sourceSets.main, 'antiquark.refmap.json'
+    }
 
     runs {
         configureEach {
@@ -86,6 +91,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly files('libs/Zeta-1.0-31.jar')
     runtimeOnly files('libs/Zeta-1.0-31.jar')
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 tasks.named('processResources', ProcessResources).configure {
@@ -114,7 +120,8 @@ tasks.named('jar', Jar).configure {
                 'Implementation-Title'    : mod_name,
                 'Implementation-Version'  : mod_version,
                 'Implementation-Vendor'   : mod_authors,
-                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                'MixinConfigs': 'antiquark.mixins.json'
         ])
     }
 

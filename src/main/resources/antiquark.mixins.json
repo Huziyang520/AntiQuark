@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "com.antiquark.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "antiquark.refmap.json",
+  "minVersion": "0.8.5",
+  "mixins": [
+    "server.EnderManMixin",
+    "server.EnderManInvoker",
+    "server.FallingBlockEntityMixin",
+    "server.LivingEntityVoidTotemMixin",
+    "server.MobLeashMixin",
+    "server.StrongholdPortalMixin",
+    "server.ZombieKilledEntityMixin",
+    "server.PortalShapeMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
