@@ -11,6 +11,7 @@
     "server.LivingEntityVoidTotemMixin",
     "server.MobLeashMixin",
     "server.StructurePieceEndPortalMixin",
+    "server.StructurePieceInvoker",
     "server.ZombieKilledEntityMixin",
     "server.PortalShapeMixin"
   ],
