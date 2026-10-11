@@ -17,7 +17,7 @@ public class BoatMiningSpeedModule extends ZetaModule {
     @PlayEvent
     public void onBreakSpeed(ZPlayer.BreakSpeed event) {
         if (event.getEntity().isPassenger() && event.getEntity().getVehicle() instanceof Boat) {
-            event.setNewSpeed(event.getOriginalSpeed());
+            event.setNewSpeed(event.getOriginalSpeed() * 5.0F);
         }
     }
 }

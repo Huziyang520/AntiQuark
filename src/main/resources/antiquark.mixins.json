@@ -5,11 +5,11 @@
   "refmap": "antiquark.refmap.json",
   "minVersion": "0.8.5",
   "mixins": [
-    "server.EnderManMixin",
-    "server.EnderManInvoker",
+    "server.CatMixin",
     "server.FallingBlockEntityMixin",
     "server.LivingEntityVoidTotemMixin",
     "server.MobLeashMixin",
+    "server.SheepMixin",
     "server.StructurePieceEndPortalMixin",
     "server.StructurePieceInvoker",
     "server.ZombieKilledEntityMixin",

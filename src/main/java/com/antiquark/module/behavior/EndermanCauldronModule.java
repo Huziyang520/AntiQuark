@@ -1,13 +1,13 @@
 package com.antiquark.module.behavior;
 
 import com.antiquark.module.CategoryKeys;
+import com.antiquark.util.EnderManTeleportHelper;
 
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.level.block.AbstractCauldronBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import com.antiquark.mixin.server.EnderManTeleportHelper;
 import org.violetmoon.zeta.event.bus.PlayEvent;
 import org.violetmoon.zeta.event.play.entity.living.ZLivingTick;
 import org.violetmoon.zeta.module.ModuleInstance;

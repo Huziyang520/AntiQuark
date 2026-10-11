@@ -1,4 +1,4 @@
-package com.antiquark.mixin.server;
+package com.antiquark.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;

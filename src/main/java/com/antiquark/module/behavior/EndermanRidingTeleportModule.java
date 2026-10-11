@@ -1,9 +1,9 @@
 package com.antiquark.module.behavior;
 
 import com.antiquark.module.CategoryKeys;
+import com.antiquark.util.EnderManTeleportHelper;
 
 import net.minecraft.world.entity.monster.EnderMan;
-import com.antiquark.mixin.server.EnderManTeleportHelper;
 import org.violetmoon.zeta.event.bus.PlayEvent;
 import org.violetmoon.zeta.event.play.entity.living.ZLivingTick;
 import org.violetmoon.zeta.module.ModuleInstance;

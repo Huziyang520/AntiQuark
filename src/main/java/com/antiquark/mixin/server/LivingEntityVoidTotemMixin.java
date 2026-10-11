@@ -1,6 +1,7 @@
 package com.antiquark.mixin.server;
 
 import com.antiquark.AntiQuark;
+import com.antiquark.util.VoidTotemHelper;
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
