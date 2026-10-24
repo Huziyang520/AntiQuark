@@ -17,7 +17,7 @@ public abstract class LivingEntityVoidTotemMixin {
             return;
         }
         if (source.is(net.minecraft.world.damagesource.DamageTypes.FELL_OUT_OF_WORLD)) {
-            cir.setReturnValue(VoidTotemHelper.tryVoidTotem(self));
+            cir.setReturnValue(VoidTotemHelper.tryVoidTotem(self, source));
         }
     }
 }

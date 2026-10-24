@@ -1,5 +1,6 @@
 package com.antiquark.module.behavior;
 
+import com.antiquark.AntiQuark;
 import com.antiquark.module.CategoryKeys;
 
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -42,6 +43,7 @@ public class WolvesHuntPlayersModule extends ZetaModule {
         if (chance <= 0.0D || wolf.getRandom().nextDouble() >= chance) {
             return;
         }
-        wolf.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(wolf, Player.class, true));
+        wolf.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(wolf, Player.class, true,
+                target -> !wolf.isTame() && AntiQuark.ZETA.modules.isEnabled(WolvesHuntPlayersModule.class)));
     }
 }

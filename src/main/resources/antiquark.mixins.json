@@ -5,13 +5,17 @@
   "refmap": "antiquark.refmap.json",
   "minVersion": "0.8.5",
   "mixins": [
+    "server.AbstractVillagerLeashMixin",
     "server.CatMixin",
+    "server.EntityStartRidingMixin",
     "server.LivingEntityVoidTotemMixin",
     "server.MobLeashMixin",
     "server.SheepMixin",
     "server.ZombieKilledEntityMixin"
   ],
-  "client": [],
+  "client": [
+    "client.ZetaScreenAccessor"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

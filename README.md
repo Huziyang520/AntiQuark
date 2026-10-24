@@ -26,6 +26,7 @@ Currently, support is planned for the following versions only:
 ### 🙏 Acknowledgements
 
 Many of the ideas and inspirations behind this mod come from the community. Thanks to everyone whose ideas have helped shape this project!
+If you have any good ideas, feel free to share them with the author in any way you can think of.
 
 ---
 
@@ -53,3 +54,4 @@ Minecraft 中的一些特性或玩法可能不符合常理，或与你的预期�
 ### 🙏 鸣谢
 
 本模组的许多灵感来源于社区。感谢所有为本项目提供创意与启发的人！
+若你有好的创意，欢迎以你能想到的任何方式告诉作者。
