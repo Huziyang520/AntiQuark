@@ -16,15 +16,21 @@ import org.violetmoon.zeta.module.ZetaModule;
 @ZetaLoadModule(category = CategoryKeys.CREATURES, name = "Fearless Cats", description = "Some naturally spawned cats no longer flee from players.")
 public class FearlessCatModule extends ZetaModule {
     private static final String FEARLESS_TAG = "antiquark:fearless_cat";
+    private static final double DEFAULT_CHANCE = 0.3D;
 
     @ModuleInstance
     public static FearlessCatModule INSTANCE;
 
     @Config(name = "Chance", description = "Chance for a newly spawned cat to be fearless.")
-    public double chance = 0.5D;
+    @Config.Min(0.0D)
+    @Config.Max(1.0D)
+    public double chance = DEFAULT_CHANCE;
+
+    @Config(name = "Config Version", description = "Internal marker used for one-time config migrations. Do not edit.")
+    public int configVersion = 0;
 
     public static double chance() {
-        return INSTANCE == null ? 0.5D : INSTANCE.chance;
+        return INSTANCE == null ? DEFAULT_CHANCE : INSTANCE.chance;
     }
 
     @PlayEvent

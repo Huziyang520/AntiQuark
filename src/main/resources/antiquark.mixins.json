@@ -6,14 +6,10 @@
   "minVersion": "0.8.5",
   "mixins": [
     "server.CatMixin",
-    "server.FallingBlockEntityMixin",
     "server.LivingEntityVoidTotemMixin",
     "server.MobLeashMixin",
     "server.SheepMixin",
-    "server.StructurePieceEndPortalMixin",
-    "server.StructurePieceInvoker",
-    "server.ZombieKilledEntityMixin",
-    "server.PortalShapeMixin"
+    "server.ZombieKilledEntityMixin"
   ],
   "client": [],
   "injectors": {

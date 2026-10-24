@@ -6,7 +6,7 @@ AntiQuark requires Zeta. It is available for Forge on Minecraft 1.20.1 and NeoFo
 
 Report issues at [GitHub Issues](https://github.com/Huziyang520/AntiQuark/issues). If GitHub is unavailable, use the [backup issue site](https://issue.mengcai.online/).
 
-AntiQuark is licensed under the MIT License.
+AntiQuark is released into the public domain under the CC0 1.0 Universal dedication.
 
 ## 反夸克
 
@@ -16,4 +16,4 @@ AntiQuark is licensed under the MIT License.
 
 问题反馈请前往 [GitHub Issues](https://github.com/Huziyang520/AntiQuark/issues)；无法访问 GitHub 时，可使用[备用反馈站](https://issue.mengcai.online/)。
 
-本项目使用 MIT 许可证。
+本项目以 CC0 1.0 通用公共领域贡献声明释放到公共领域。

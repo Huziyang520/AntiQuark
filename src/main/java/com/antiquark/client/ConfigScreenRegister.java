@@ -7,7 +7,6 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.violetmoon.zeta.client.ZetaClient;
 import org.violetmoon.zeta.client.config.screen.ZetaConfigHomeScreen;
 
 @Mod.EventBusSubscriber(modid = AntiQuark.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -18,9 +17,7 @@ public final class ConfigScreenRegister {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class,
-                () -> new ConfigScreenHandler.ConfigScreenFactory((mc, parent) -> {
-                    ZetaClient zetaClient = new org.violetmoon.zetaimplforge.client.ForgeZetaClient(AntiQuark.ZETA);
-                    return new ZetaConfigHomeScreen(zetaClient, parent);
-                }));
+                () -> new ConfigScreenHandler.ConfigScreenFactory((mc, parent) ->
+                        new ZetaConfigHomeScreen(AntiQuarkClient.zetaClient(), parent)));
     }
 }

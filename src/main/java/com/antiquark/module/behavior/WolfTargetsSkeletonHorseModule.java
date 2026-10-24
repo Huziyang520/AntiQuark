@@ -14,7 +14,7 @@ import org.violetmoon.zeta.module.ZetaModule;
 import org.violetmoon.zeta.event.bus.PlayEvent;
 import org.violetmoon.zeta.event.play.entity.ZEntityJoinLevel;
 
-@ZetaLoadModule(category = CategoryKeys.CREATURES, name = "Wolf Targets Skeleton Horses", description = "Wolves consider skeleton horses valid prey.")
+@ZetaLoadModule(category = CategoryKeys.CREATURES, name = "Wolf Targets Skeleton Horses", description = "Untamed wolves consider skeleton horses valid prey.")
 public class WolfTargetsSkeletonHorseModule extends ZetaModule {
     private static final String APPLIED_TAG = "antiquark:wolf_targets_skeleton_horses";
 
