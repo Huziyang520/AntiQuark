@@ -1,19 +1,55 @@
-# AntiQuark
+# Anti-Quark
 
-AntiQuark is a lightweight, player-focused compatibility mod for Minecraft. It keeps vanilla behavior predictable around overlapping features and provides a small set of configurable changes for players who want a smoother modded experience.
+[**简体中文**](#中文)
 
-AntiQuark requires Zeta. It is available for Forge on Minecraft 1.20.1 and NeoForge on Minecraft 1.21.1.
+## 🇬🇧 English
 
-Report issues at [GitHub Issues](https://github.com/Huziyang520/AntiQuark/issues). If GitHub is unavailable, use the [backup issue site](https://issue.mengcai.online/).
+Minecraft features and gameplay mechanics may sometimes behave in ways that seem counterintuitive or differ from what you would normally expect. **Anti-Quark** introduces a collection of new features, gameplay mechanics, and configuration options that challenge these expectations.
 
-AntiQuark is released into the public domain under the CC0 1.0 Universal dedication.
+Features that the author believes most players will find unobjectionable are enabled by default. You can also customize the configuration to suit your own preferences.
 
-## 反夸克
+### 📦 Requirements
 
-反夸克是一个轻量、面向玩家的 Minecraft 兼容性模组，用于让原版行为在功能重叠时保持稳定，并提供少量可配置改动，让模组体验更顺畅。
+- Requires [Zeta](https://www.curseforge.com/minecraft/mc-mods/zeta).
 
-本模组需要安装前置 Zeta，支持 Minecraft 1.20.1 的 Forge 与 Minecraft 1.21.1 的 NeoForge。
+### ⚠️ Notes
 
-问题反馈请前往 [GitHub Issues](https://github.com/Huziyang520/AntiQuark/issues)；无法访问 GitHub 时，可使用[备用反馈站](https://issue.mengcai.online/)。
+- Installing Anti-Quark alongside [Quark](https://www.curseforge.com/minecraft/mc-mods/quark) will not cause annihilation.
 
-本项目以 CC0 1.0 通用公共领域贡献声明释放到公共领域。
+### 🛠️ Supported Versions
+
+Currently, support is planned for the following versions only:
+
+- **Forge 1.20.1**
+- **NeoForge 1.21.1**
+
+### 🙏 Acknowledgements
+
+Many of the ideas and inspirations behind this mod come from the community. Thanks to everyone whose ideas have helped shape this project!
+
+---
+
+## 🇨🇳 中文
+
+Minecraft 中的一些特性或玩法可能不符合常理，或与你的预期有所不同。**反夸克（Anti-Quark）** 引入了一系列新的特性、玩法机制与配置选项，为游戏带来一些出乎意料的变化。
+
+作者认为大多数玩家都能接受的内容将默认启用。你也可以根据自己的喜好调整配置，自由决定启用哪些特性。
+
+### 📦 使用要求
+
+- 需要安装前置模组 [Zeta](https://www.curseforge.com/minecraft/mc-mods/zeta)。
+
+### ⚠️ 注意事项
+
+- 本模组与 [Quark（夸克）](https://www.curseforge.com/minecraft/mc-mods/quark) 同时安装不会引发湮灭。
+
+### 🛠️ 支持版本
+
+目前仅计划支持以下版本：
+
+- **Forge 1.20.1**
+- **NeoForge 1.21.1**
+
+### 🙏 鸣谢
+
+本模组的许多灵感来源于社区。感谢所有为本项目提供创意与启发的人！

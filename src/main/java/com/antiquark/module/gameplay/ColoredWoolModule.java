@@ -6,6 +6,8 @@ import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import org.violetmoon.zeta.event.bus.LoadEvent;
+import org.violetmoon.zeta.event.load.ZRegister;
 import org.violetmoon.zeta.module.ModuleInstance;
 import org.violetmoon.zeta.module.ZetaLoadModule;
 import org.violetmoon.zeta.module.ZetaModule;
@@ -16,9 +18,12 @@ public class ColoredWoolModule extends ZetaModule {
     @ModuleInstance
     public static ColoredWoolModule INSTANCE;
 
-    public final Item wool = new ColoredWoolItem("colored_wool", this, new Item.Properties());
+    private Item wool;
 
-    public ColoredWoolModule() {
+    //The item registry is frozen during mod construction, so content is created at registry time
+    @LoadEvent
+    public void register(ZRegister event) {
+        wool = new ColoredWoolItem("colored_wool", this, new Item.Properties());
         CreativeTabManager.addToCreativeTab(CreativeModeTabs.INGREDIENTS, wool);
     }
 
@@ -28,6 +33,6 @@ public class ColoredWoolModule extends ZetaModule {
 
     public static Item wool() {
         ColoredWoolModule module = INSTANCE;
-        return module == null ? Items.WHITE_WOOL : module.wool;
+        return module == null || module.wool == null ? Items.WHITE_WOOL : module.wool;
     }
 }

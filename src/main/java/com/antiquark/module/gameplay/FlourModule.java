@@ -4,6 +4,8 @@ import com.antiquark.module.CategoryKeys;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import org.violetmoon.zeta.event.bus.LoadEvent;
+import org.violetmoon.zeta.event.load.ZRegister;
 import org.violetmoon.zeta.item.ZetaItem;
 import org.violetmoon.zeta.module.ModuleInstance;
 import org.violetmoon.zeta.module.ZetaLoadModule;
@@ -15,9 +17,12 @@ public class FlourModule extends ZetaModule {
     @ModuleInstance
     public static FlourModule INSTANCE;
 
-    public final Item flour = new ZetaItem("flour", this, new Item.Properties());
+    private Item flour;
 
-    public FlourModule() {
+    //The item registry is frozen during mod construction, so content is created at registry time
+    @LoadEvent
+    public void register(ZRegister event) {
+        flour = new ZetaItem("flour", this, new Item.Properties());
         CreativeTabManager.addToCreativeTab(CreativeModeTabs.INGREDIENTS, flour);
     }
 }
