@@ -2,6 +2,7 @@ package com.antiquark.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -9,20 +10,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraftforge.common.ForgeHooks;
 
 /**
  * Void totem: mirrors the vanilla totem sequence, but the entity lands at a safe spot found the same
- * way chorus fruit looks for a destination, over a much larger area. Nothing is consumed when the
- * search finds no landing spot.
+ * way chorus fruit looks for a destination, over a much larger horizontal area. Nothing is consumed
+ * when the search finds no landing spot.
  */
 public final class VoidTotemHelper {
     private static final int HORIZONTAL_RANGE = 128;
-    private static final int ATTEMPTS = 96;
+    private static final int COLUMN_ATTEMPTS = 24;
 
     private VoidTotemHelper() {
     }
@@ -62,29 +61,38 @@ public final class VoidTotemHelper {
         entity.resetFallDistance();
     }
 
+    /**
+     * Only X and Z are searched over a fixed range; the landing height comes from scanning the whole
+     * column, so nothing depends on where the entity currently is vertically.
+     */
     private static BlockPos findLanding(LivingEntity entity) {
         Level level = entity.level();
         BlockPos origin = entity.blockPosition();
-        for (int attempt = 0; attempt < ATTEMPTS; attempt++) {
+        int top = level.getMaxBuildHeight() - 2;
+        int bottom = level.getMinBuildHeight() + 1;
+
+        for (int attempt = 0; attempt < COLUMN_ATTEMPTS; attempt++) {
             int x = origin.getX() + entity.getRandom().nextInt(HORIZONTAL_RANGE * 2 + 1) - HORIZONTAL_RANGE;
             int z = origin.getZ() + entity.getRandom().nextInt(HORIZONTAL_RANGE * 2 + 1) - HORIZONTAL_RANGE;
-            BlockPos column = new BlockPos(x, origin.getY(), z);
-            if (!level.hasChunkAt(column)) {
+            if (!level.hasChunkAt(x, z)) {
                 continue;
             }
-            int surface = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z);
-            if (surface <= level.getMinBuildHeight() + 8) {
-                continue;
-            }
-            BlockPos landing = new BlockPos(x, surface, z);
-            BlockState state = level.getBlockState(landing);
-            if (!state.getFluidState().isEmpty() || !state.getCollisionShape(level, landing).isEmpty()) {
-                continue;
-            }
-            AABB box = entity.getType().getDimensions()
-                    .makeBoundingBox(landing.getX() + 0.5D, landing.getY(), landing.getZ() + 0.5D);
-            if (level.noCollision(entity, box)) {
-                return landing;
+            for (int y = top; y > bottom; y--) {
+                BlockPos landing = new BlockPos(x, y, z);
+                BlockState state = level.getBlockState(landing);
+                if (!state.getFluidState().isEmpty() || !state.getCollisionShape(level, landing).isEmpty()) {
+                    continue;
+                }
+                BlockPos ground = landing.below();
+                BlockState groundState = level.getBlockState(ground);
+                if (!groundState.getFluidState().isEmpty() || groundState.getCollisionShape(level, ground).isEmpty()) {
+                    continue;
+                }
+                AABB box = entity.getType().getDimensions()
+                        .makeBoundingBox(landing.getX() + 0.5D, landing.getY(), landing.getZ() + 0.5D);
+                if (level.noCollision(entity, box)) {
+                    return landing;
+                }
             }
         }
         return null;
