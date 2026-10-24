@@ -18,12 +18,14 @@ public final class AntiQuarkClient {
     }
 
     public static void init() {
+        //Created eagerly so every client load event reaches Zeta's own client extensions
+        zetaClient = new ForgeZetaClient(AntiQuark.ZETA);
         AntiQuark.ZETA.loadBus.subscribe(AntiQuarkClient.class);
     }
 
     public static ZetaClient zetaClient() {
         if (zetaClient == null) {
-            zetaClient = new ForgeZetaClient(AntiQuark.ZETA);
+            init();
         }
         return zetaClient;
     }
