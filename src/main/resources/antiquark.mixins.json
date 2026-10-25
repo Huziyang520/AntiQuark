@@ -9,6 +9,7 @@
     "server.EntityStartRidingMixin",
     "server.LivingEntityVoidTotemMixin",
     "server.MobLeashMixin",
+    "server.SlimeLeashMixin",
     "server.SheepMixin",
     "server.ZombieKilledEntityMixin"
   ],
