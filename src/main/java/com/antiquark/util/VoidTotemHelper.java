@@ -55,10 +55,11 @@ public final class VoidTotemHelper {
         entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
         entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
         entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
-        entity.level().broadcastEntityEvent(entity, (byte) 35);
         entity.teleportTo(landing.getX() + 0.5D, landing.getY(), landing.getZ() + 0.5D);
         entity.setDeltaMovement(Vec3.ZERO);
         entity.resetFallDistance();
+        //After the teleport, so clients play the totem sound and particles at the landing spot
+        entity.level().broadcastEntityEvent(entity, (byte) 35);
     }
 
     /**
