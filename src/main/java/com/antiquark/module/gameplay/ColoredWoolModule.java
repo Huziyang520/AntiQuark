@@ -9,6 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import org.violetmoon.zeta.block.ZetaBlock;
 import org.violetmoon.zeta.event.bus.LoadEvent;
 import org.violetmoon.zeta.event.load.ZRegister;
 import org.violetmoon.zeta.module.ModuleInstance;
@@ -26,7 +27,7 @@ public class ColoredWoolModule extends ZetaModule {
     //The block registry is frozen during mod construction, so content is created at registry time
     @LoadEvent
     public void register(ZRegister event) {
-        wool = new ColoredWoolBlock("colored_wool", this, BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL));
+        wool = new ZetaBlock("colored_wool", this, BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL));
         CreativeTabManager.addToCreativeTab(CreativeModeTabs.BUILDING_BLOCKS, wool);
     }
 

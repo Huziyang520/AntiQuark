@@ -5,11 +5,8 @@ import java.util.List;
 import com.antiquark.AntiQuark;
 import com.antiquark.client.widget.CaptionWidget;
 import com.antiquark.mixin.client.ZetaScreenAccessor;
-import com.antiquark.module.gameplay.ColoredWoolBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.color.block.BlockColor;
-import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -21,8 +18,6 @@ import org.violetmoon.zeta.client.config.screen.SectionScreen;
 import org.violetmoon.zeta.client.config.screen.ZetaScreen;
 import org.violetmoon.zeta.client.config.widget.CategoryButton;
 import org.violetmoon.zeta.client.config.widget.CheckboxButton;
-import org.violetmoon.zeta.client.event.load.ZAddBlockColorHandlers;
-import org.violetmoon.zeta.client.event.load.ZAddItemColorHandlers;
 import org.violetmoon.zeta.config.ChangeSet;
 import org.violetmoon.zeta.config.SectionDefinition;
 import org.violetmoon.zeta.config.ValueDefinition;
@@ -61,18 +56,6 @@ public final class AntiQuarkClient {
             init();
         }
         return zetaClient;
-    }
-
-    @LoadEvent
-    public static void registerItemColors(ZAddItemColorHandlers event) {
-        ItemColor rainbow = (stack, tintIndex) -> tintIndex == 0 ? RainbowColors.currentColor() : -1;
-        event.registerNamed(AntiQuark.ZETA, item -> rainbow, ColoredWoolBlock.COLOR_PROVIDER);
-    }
-
-    @LoadEvent
-    public static void registerBlockColors(ZAddBlockColorHandlers event) {
-        BlockColor rainbow = (state, level, pos, tintIndex) -> tintIndex == 0 ? RainbowColors.currentColor() : -1;
-        event.registerNamed(AntiQuark.ZETA, block -> rainbow, ColoredWoolBlock.COLOR_PROVIDER);
     }
 
     public static void notifyConfigApplied() {
@@ -147,6 +130,6 @@ public final class AntiQuarkClient {
 
     private static int startX(int centerX, int count) {
         int totalWidth = count * BUTTON_WIDTH + Math.max(0, count - 1) * H_PAD;
-        return centerX - totalWidth / 2;
+        return (centerX - totalWidth) / 2;
     }
 }
