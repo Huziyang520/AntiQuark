@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "package": "com.antiquark.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8.7",
+  "mixins": [
+    "server.AbstractVillagerLeashMixin",
+    "server.CatMixin",
+    "server.EntityStartRidingMixin",
+    "server.LivingEntityVoidTotemMixin",
+    "server.MobLeashMixin",
+    "server.SheepMixin",
+    "server.ZombieKilledEntityMixin"
+  ],
+  "client": [
+    "client.ConfigHomeScreenMixin",
+    "client.ZetaScreenAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "antiquark:grass"
+    },
+    {
+      "tag": "antiquark:grass"
+    },
+    {
+      "tag": "antiquark:grass"
+    },
+    {
+      "tag": "antiquark:grass"
+    },
+    {
+      "tag": "antiquark:grass"
+    },
+    {
+      "tag": "antiquark:grass"
+    },
+    {
+      "tag": "antiquark:grass"
+    },
+    {
+      "tag": "antiquark:grass"
+    },
+    {
+      "tag": "antiquark:grass"
+    }
+  ],
+  "result": {
+    "id": "minecraft:green_dye",
+    "count": 2
+  }
+}
