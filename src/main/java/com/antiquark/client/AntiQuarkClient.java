@@ -15,7 +15,7 @@ import net.minecraftforge.common.MinecraftForge;
 import org.violetmoon.zeta.Zeta;
 import org.violetmoon.zeta.client.ZetaClient;
 import org.violetmoon.zeta.client.config.screen.SectionScreen;
-import org.violetmoon.zeta.client.config.screen.ZetaScreen;
+import org.violetmoon.zeta.client.config.screen.ZetaConfigHomeScreen;
 import org.violetmoon.zeta.client.config.widget.CategoryButton;
 import org.violetmoon.zeta.client.config.widget.CheckboxButton;
 import org.violetmoon.zeta.config.ChangeSet;
@@ -66,7 +66,7 @@ public final class AntiQuarkClient {
 
     private static void onScreenInit(ScreenEvent.Init.Post event) {
         Screen screen = event.getScreen();
-        if (!(screen instanceof ZetaScreen zetaScreen)) {
+        if (!(screen instanceof ZetaConfigHomeScreen zetaScreen)) {
             return;
         }
         Zeta foreign = ((ZetaScreenAccessor) zetaScreen).antiquark$getZeta();

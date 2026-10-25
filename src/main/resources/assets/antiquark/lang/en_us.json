@@ -33,7 +33,7 @@
   "quark.config.gameplay.name": "Gameplay",
   "quark.config.gameplay.desc": "Player, item and progression changes.",
   "quark.config.gameplay.leash_any_mob.name": "Leash Any Mob",
-  "quark.config.gameplay.leash_any_mob.desc": "Leashes can attach to any mob in survival mode.",
+  "quark.config.gameplay.leash_any_mob.desc": "Leashes can attach to any mob in survival mode. Villagers are controlled by the leash-villagers option instead.",
   "quark.config.gameplay.leash_villagers.name": "Leash Villagers",
   "quark.config.gameplay.leash_villagers.desc": "Villagers can be leashed.",
   "quark.config.gameplay.void_totem.name": "Void Totem",

@@ -33,7 +33,7 @@
   "quark.config.gameplay.name": "玩法",
   "quark.config.gameplay.desc": "玩家、物品与进度相关改动。",
   "quark.config.gameplay.leash_any_mob.name": "拴绳拴住任意生物",
-  "quark.config.gameplay.leash_any_mob.desc": "生存模式下拴绳可以拴住任意生物。",
+  "quark.config.gameplay.leash_any_mob.desc": "生存模式下拴绳可以拴住任意生物；村民另由“拴绳拴住村民”控制。",
   "quark.config.gameplay.leash_villagers.name": "拴绳拴住村民",
   "quark.config.gameplay.leash_villagers.desc": "村民可以被拴绳拴住。",
   "quark.config.gameplay.void_totem.name": "虚空不死图腾",
