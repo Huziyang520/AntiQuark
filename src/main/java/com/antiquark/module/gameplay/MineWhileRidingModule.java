@@ -20,7 +20,7 @@ public class MineWhileRidingModule extends ZetaModule {
     public void onBreakSpeed(ZPlayer.BreakSpeed event) {
         Player player = event.getPlayer();
         if (player.isPassenger() && (player.getVehicle() instanceof Boat || player.getVehicle() instanceof AbstractMinecart)) {
-            //The airborne mining penalty divides the speed by five, which is what riding a vehicle counts as
+
             event.setNewSpeed(event.getOriginalSpeed() * 5.0F);
         }
     }

@@ -17,17 +17,16 @@ import org.violetmoon.zeta.module.ZetaLoadModule;
 import org.violetmoon.zeta.module.ZetaModule;
 import org.violetmoon.zeta.registry.CreativeTabManager;
 
-@ZetaLoadModule(category = CategoryKeys.GAMEPLAY, name = "Colored Wool", description = "Shearing a sheep named jeb_ yields wool whose color keeps shifting.")
-public class ColoredWoolModule extends ZetaModule {
+@ZetaLoadModule(category = CategoryKeys.GAMEPLAY, name = "Rainbow Wool", description = "Shearing a sheep named jeb_ yields wool whose color keeps shifting.")
+public class RainbowWoolModule extends ZetaModule {
     @ModuleInstance
-    public static ColoredWoolModule INSTANCE;
+    public static RainbowWoolModule INSTANCE;
 
     private Block wool;
 
-    //The block registry is frozen during mod construction, so content is created at registry time
     @LoadEvent
     public void register(ZRegister event) {
-        wool = new ZetaBlock("colored_wool", this, BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL));
+        wool = new ZetaBlock("rainbow_wool", this, BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL));
         CreativeTabManager.addToCreativeTab(CreativeModeTabs.BUILDING_BLOCKS, wool);
     }
 
@@ -36,7 +35,7 @@ public class ColoredWoolModule extends ZetaModule {
     }
 
     public static ItemStack woolStack(int count) {
-        ColoredWoolModule module = INSTANCE;
+        RainbowWoolModule module = INSTANCE;
         if (module == null || module.wool == null) {
             return new ItemStack(Items.WHITE_WOOL, count);
         }
@@ -44,7 +43,7 @@ public class ColoredWoolModule extends ZetaModule {
     }
 
     public static boolean woolAvailable() {
-        ColoredWoolModule module = INSTANCE;
+        RainbowWoolModule module = INSTANCE;
         return module != null && module.wool != null;
     }
 }

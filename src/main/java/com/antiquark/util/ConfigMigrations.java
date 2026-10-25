@@ -9,9 +9,6 @@ import org.violetmoon.zeta.config.SectionDefinition;
 import org.violetmoon.zeta.config.ValueDefinition;
 import org.violetmoon.zeta.module.ZetaModule;
 
-/**
- * One-shot, idempotent config migrations guarded by a "Config Version" marker.
- */
 public final class ConfigMigrations {
     private static final int CURRENT_VERSION = 1;
     private static final String VERSION_OPTION = "Config Version";
@@ -49,7 +46,6 @@ public final class ConfigMigrations {
         }
     }
 
-    //The 0.1.x default was 50%; the new default is 30%
     private static void migrateFearlessCatChance(SectionDefinition section, IZetaConfigInternals internals) {
         ValueDefinition<Double> chanceOption = section.getValue("Chance", Double.class);
         if (chanceOption == null) {

@@ -25,12 +25,8 @@ import org.violetmoon.zeta.event.bus.LoadEvent;
 import org.violetmoon.zeta.module.ZetaCategory;
 import org.violetmoon.zetaimplforge.client.ForgeZetaClient;
 
-/**
- * Client-only entry point: colours, the config categories mounted into other Zeta mods' config screens,
- * and the config reload notice.
- */
 public final class AntiQuarkClient {
-    //Mirrors the layout constants of Zeta's config home screen
+
     private static final int BUTTON_WIDTH = 120;
     private static final int BUTTON_HEIGHT = 20;
     private static final int ROW_HEIGHT = 23;
@@ -45,7 +41,7 @@ public final class AntiQuarkClient {
     }
 
     public static void init() {
-        //Created eagerly so every client load event reaches Zeta's own client extensions
+
         zetaClient = new ForgeZetaClient(AntiQuark.ZETA);
         AntiQuark.ZETA.loadBus.subscribe(AntiQuarkClient.class);
         MinecraftForge.EVENT_BUS.addListener(AntiQuarkClient::onScreenInit);
@@ -68,10 +64,6 @@ public final class AntiQuarkClient {
         minecraft.gui.getChat().addMessage(Component.translatable("antiquark.misc.reloaded2").withStyle(ChatFormatting.WHITE));
     }
 
-    /**
-     * Mounts this mod's config categories under the categories of other Zeta mods' config screens,
-     * with a header matching the one those screens draw.
-     */
     private static void onScreenInit(ScreenEvent.Init.Post event) {
         Screen screen = event.getScreen();
         if (!(screen instanceof ZetaScreen zetaScreen)) {

@@ -19,7 +19,6 @@ public class FlourModule extends ZetaModule {
 
     private Item flour;
 
-    //The item registry is frozen during mod construction, so content is created at registry time
     @LoadEvent
     public void register(ZRegister event) {
         flour = new ZetaItem("flour", this, new Item.Properties());

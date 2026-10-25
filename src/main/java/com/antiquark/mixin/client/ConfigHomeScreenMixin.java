@@ -10,9 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.violetmoon.zeta.Zeta;
 import org.violetmoon.zeta.client.config.screen.ZetaConfigHomeScreen;
 
-/**
- * The reload notice belongs to saving this mod's config, not to every config reload.
- */
 @Mixin(ZetaConfigHomeScreen.class)
 public abstract class ConfigHomeScreenMixin {
     @Inject(method = "commit", at = @At("HEAD"), remap = false)

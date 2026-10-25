@@ -42,8 +42,8 @@
   "quark.config.gameplay.guaranteed_zombie_villagers.desc": "任意非和平难度下，僵尸击杀村民必定转化为僵尸村民。",
   "quark.config.gameplay.mining_while_riding.name": "骑乘时挖掘不减速",
   "quark.config.gameplay.mining_while_riding.desc": "在船或矿车上挖掘方块的速度与地面一致。",
-  "quark.config.gameplay.colored_wool.name": "彩色羊毛",
-  "quark.config.gameplay.colored_wool.desc": "剪命名为 jeb_ 的羊会获得会变色的彩色羊毛方块。",
+  "quark.config.gameplay.rainbow_wool.name": "彩虹羊毛",
+  "quark.config.gameplay.rainbow_wool.desc": "剪命名为 jeb_ 的羊会获得会变色的彩虹羊毛方块。",
   "quark.config.gameplay.flour.name": "面粉",
   "quark.config.gameplay.flour.desc": "小麦可以磨成面粉，面粉可以用来制作粘液球。",
   "quark.config.gameplay.grass_to_green_dye.name": "草合成绿色染料",
@@ -52,7 +52,7 @@
   "antiquark.misc.reloaded0": "已重新加载反夸克配置",
   "antiquark.misc.reloaded1": "- 如果修改了会影响配方的选项，请执行 /reload",
   "antiquark.misc.reloaded2": "- 如果改动未生效，请尝试重启游戏",
-  "block.antiquark.colored_wool": "彩色羊毛",
-  "item.antiquark.colored_wool": "彩色羊毛",
+  "block.antiquark.rainbow_wool": "彩虹羊毛",
+  "item.antiquark.rainbow_wool": "彩虹羊毛",
   "item.antiquark.flour": "面粉"
 }

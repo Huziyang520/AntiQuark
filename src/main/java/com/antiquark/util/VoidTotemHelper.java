@@ -14,11 +14,6 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.ForgeHooks;
 
-/**
- * Void totem: mirrors the vanilla totem sequence, but the entity lands at a safe spot found the same
- * way chorus fruit looks for a destination, over a much larger horizontal area. Nothing is consumed
- * when the search finds no landing spot.
- */
 public final class VoidTotemHelper {
     private static final int HORIZONTAL_RANGE = 128;
     private static final int COLUMN_ATTEMPTS = 24;
@@ -58,14 +53,10 @@ public final class VoidTotemHelper {
         entity.teleportTo(landing.getX() + 0.5D, landing.getY(), landing.getZ() + 0.5D);
         entity.setDeltaMovement(Vec3.ZERO);
         entity.resetFallDistance();
-        //After the teleport, so clients play the totem sound and particles at the landing spot
+
         entity.level().broadcastEntityEvent(entity, (byte) 35);
     }
 
-    /**
-     * Only X and Z are searched over a fixed range; the landing height comes from scanning the whole
-     * column, so nothing depends on where the entity currently is vertically.
-     */
     private static BlockPos findLanding(LivingEntity entity) {
         Level level = entity.level();
         BlockPos origin = entity.blockPosition();

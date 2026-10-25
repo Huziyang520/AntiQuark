@@ -42,8 +42,8 @@
   "quark.config.gameplay.guaranteed_zombie_villagers.desc": "Zombies always convert villagers into zombie villagers on any non-peaceful difficulty.",
   "quark.config.gameplay.mining_while_riding.name": "Mining While Riding",
   "quark.config.gameplay.mining_while_riding.desc": "Mining from a boat or minecart is as fast as mining on foot.",
-  "quark.config.gameplay.colored_wool.name": "Colored Wool",
-  "quark.config.gameplay.colored_wool.desc": "Shearing a sheep named jeb_ yields colored wool blocks whose color keeps shifting.",
+  "quark.config.gameplay.rainbow_wool.name": "Rainbow Wool",
+  "quark.config.gameplay.rainbow_wool.desc": "Shearing a sheep named jeb_ yields rainbow wool blocks that keep changing colours.",
   "quark.config.gameplay.flour.name": "Flour",
   "quark.config.gameplay.flour.desc": "Wheat can be ground into flour, and flour can be turned into slime balls.",
   "quark.config.gameplay.grass_to_green_dye.name": "Grass to Green Dye",
@@ -52,7 +52,7 @@
   "antiquark.misc.reloaded0": "Your AntiQuark config has been reloaded.",
   "antiquark.misc.reloaded1": "- If you changed anything that affects recipes, please run /reload.",
   "antiquark.misc.reloaded2": "- If your changes aren't applied, try restarting the game.",
-  "block.antiquark.colored_wool": "Colored Wool",
-  "item.antiquark.colored_wool": "Colored Wool",
+  "block.antiquark.rainbow_wool": "Rainbow Wool",
+  "item.antiquark.rainbow_wool": "Rainbow Wool",
   "item.antiquark.flour": "Flour"
 }

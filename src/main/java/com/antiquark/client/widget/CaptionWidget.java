@@ -6,9 +6,6 @@ import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
 
-/**
- * Centered caption with no background, used to title a mounted config section.
- */
 public class CaptionWidget extends AbstractWidget {
     private final int color;
 
